@@ -5,7 +5,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Entity(name = "Endereco")
-@Table(name = "endereco")
+@Table(name = "enderecos")
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class Endereco {
@@ -18,4 +18,12 @@ public class Endereco {
     private String uf;
     private String complemento;
 
+    public Endereco(EnderecoDto endereco) {
+        this.logradouro = endereco.logradouro();
+        this.bairro = endereco.bairro();
+        this.cep = endereco.cep();
+        this.cidade = endereco.cidade();
+        this.uf = endereco.uf();
+        this.complemento = endereco.complemento();
+    }
 }
