@@ -3,7 +3,7 @@ package med.vall.api.model.endereco;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 
-public record EnderecoDto(
+public record DadosEndereco(
         @NotBlank
         String logradouro,
         @NotBlank
